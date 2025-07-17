@@ -7,8 +7,8 @@ import co.elastic.clients.elasticsearch.core.SearchRequest;
 import co.elastic.clients.elasticsearch.core.SearchResponse;
 import co.elastic.clients.elasticsearch.core.search.Hit;
 import co.elastic.clients.json.JsonData;
-import com.quicksearch.dto.CourseSearchResponse;
 import com.quicksearch.quicksearch.document.CourseDocument;
+import com.quicksearch.quicksearch.dto.CourseSearchResponse;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -25,6 +25,8 @@ public class SearchService {
         this.client = client;
     }
 
+    // ----------------- 🔍 SEARCH COURSES -----------------
+
     public CourseSearchResponse searchCourses(
             String q, Integer minAge, Integer maxAge, String category, String type,
             Double minPrice, Double maxPrice, LocalDate startDate, String sort, int page, int size) throws Exception {
@@ -33,14 +35,18 @@ public class SearchService {
         List<Query> filters = new ArrayList<>();
 
         if (q != null && !q.isBlank()) {
-            must.add(Query.of(m -> m.multiMatch(mm -> mm.fields("title", "description").query(q))));
+            must.add(Query.of(m -> m
+                    .multiMatch(mm -> mm
+                            .fields("title", "description")
+                            .query(q)
+                            .fuzziness("AUTO"))));
         }
 
         if (minAge != null) {
-            filters.add(Query.of(f -> f.range(r -> r.field("minAge").gte(JsonData.of(minAge)))));
+            filters.add(Query.of(f -> f.range(r -> r.field("maxAge").gte(JsonData.of(minAge)))));
         }
         if (maxAge != null) {
-            filters.add(Query.of(f -> f.range(r -> r.field("maxAge").lte(JsonData.of(maxAge)))));
+            filters.add(Query.of(f -> f.range(r -> r.field("minAge").lte(JsonData.of(maxAge)))));
         }
 
         if (minPrice != null || maxPrice != null) {
@@ -63,35 +69,24 @@ public class SearchService {
         }
 
         if (startDate != null) {
-            filters.add(Query.of(f -> f.range(r -> {
-                r.field("nextSessionDate");
-                r.gte(JsonData.of(startDate.toString()));
-                return r;
-            })));
+            filters.add(Query.of(f -> f.range(r -> r.field("nextSessionDate").gte(JsonData.of(startDate.toString())))));
         }
 
         final String finalSortField;
         final SortOrder finalSortOrder;
 
-        if (sort != null) {
-            if ("priceAsc".equalsIgnoreCase(sort)) {
-                finalSortField = "price";
-                finalSortOrder = SortOrder.Asc;
-            } else if ("priceDesc".equalsIgnoreCase(sort)) {
-                finalSortField = "price";
-                finalSortOrder = SortOrder.Desc;
-            } else {
-                finalSortField = "nextSessionDate";
-                finalSortOrder = SortOrder.Asc;
-            }
+        if ("priceAsc".equalsIgnoreCase(sort)) {
+            finalSortField = "price";
+            finalSortOrder = SortOrder.Asc;
+        } else if ("priceDesc".equalsIgnoreCase(sort)) {
+            finalSortField = "price";
+            finalSortOrder = SortOrder.Desc;
         } else {
             finalSortField = "nextSessionDate";
             finalSortOrder = SortOrder.Asc;
         }
 
         Query finalQuery = Query.of(qb -> qb.bool(b -> b.must(must).filter(filters)));
-
-        System.out.println("Final query: " + finalQuery.toString());
 
         SearchRequest searchRequest = SearchRequest.of(s -> s
                 .index("courses")
@@ -123,4 +118,26 @@ public class SearchService {
         long totalHits = response.hits().total() != null ? response.hits().total().value() : 0;
         return new CourseSearchResponse(totalHits, results);
     }
+
+    public List<String> suggestTitles(String prefix) throws Exception {
+        SearchRequest request = SearchRequest.of(s -> s
+                .index("courses")
+                .suggest(sg -> sg
+                        .suggesters("title-suggest", sgs -> sgs
+                                .prefix(prefix)
+                                .completion(c -> c
+                                        .field("suggest")
+                                        .skipDuplicates(true)
+                                        .size(10)))));
+
+        SearchResponse<Void> response = client.search(request, Void.class);
+
+        return response.suggest()
+                .get("title-suggest").stream()
+                .flatMap(suggestion -> suggestion.completion().options().stream())
+                .map(opt -> opt.text())
+                .distinct()
+                .toList();
+    }
+
 }

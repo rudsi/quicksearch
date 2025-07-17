@@ -15,19 +15,15 @@ public class ElasticsearchConfig {
 
     @Bean
     public ElasticsearchClient elasticsearchClient() {
-         
+
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JavaTimeModule());
 
-         
         JacksonJsonpMapper jsonpMapper = new JacksonJsonpMapper(mapper);
 
-         
         RestClient restClient = RestClient.builder(
-                new HttpHost("localhost", 9200)  
-        ).build();
+                new HttpHost("localhost", 9200)).build();
 
-         
         RestClientTransport transport = new RestClientTransport(restClient, jsonpMapper);
         return new ElasticsearchClient(transport);
     }

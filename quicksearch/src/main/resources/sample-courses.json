@@ -5,11 +5,15 @@
     "description": "This course offers engaging content and hands-on activities in biology.",
     "category": "Technology",
     "type": "ONE_TIME",
-    "gradeRange": "4th\u20137th",
+    "gradeRange": "4th–7th",
     "minAge": 8,
     "maxAge": 11,
     "price": 220.2,
-    "nextSessionDate": "2025-08-26T16:00:00Z"
+    "nextSessionDate": "2025-08-26T16:00:00Z",
+    "suggest": {
+      "input": ["Essentials of Biology"],
+      "weight": 1
+    }
   },
   {
     "id": "course-002",
@@ -17,11 +21,15 @@
     "description": "This course offers engaging content and hands-on activities in biology.",
     "category": "Music",
     "type": "CLUB",
-    "gradeRange": "1th\u20133th",
+    "gradeRange": "1th–3th",
     "minAge": 5,
     "maxAge": 7,
     "price": 65.37,
-    "nextSessionDate": "2025-08-15T17:00:00Z"
+    "nextSessionDate": "2025-08-15T17:00:00Z",
+    "suggest": {
+      "input": ["Intro to Biology"],
+      "weight": 1
+    }
   },
   {
     "id": "course-003",
@@ -29,11 +37,15 @@
     "description": "This course offers engaging content and hands-on activities in algebra.",
     "category": "Language Arts",
     "type": "CLUB",
-    "gradeRange": "7th\u201310th",
+    "gradeRange": "7th–10th",
     "minAge": 11,
     "maxAge": 14,
     "price": 134.31,
-    "nextSessionDate": "2025-07-31T08:00:00Z"
+    "nextSessionDate": "2025-07-31T08:00:00Z",
+    "suggest": {
+      "input": ["Workshop in Algebra"],
+      "weight": 1
+    }
   },
   {
     "id": "course-004",
@@ -41,11 +53,15 @@
     "description": "This course offers engaging content and hands-on activities in painting.",
     "category": "Music",
     "type": "CLUB",
-    "gradeRange": "5th\u20138th",
+    "gradeRange": "5th–8th",
     "minAge": 9,
     "maxAge": 12,
     "price": 64.38,
-    "nextSessionDate": "2025-08-31T13:00:00Z"
+    "nextSessionDate": "2025-08-31T13:00:00Z",
+    "suggest": {
+      "input": ["Creative Painting"],
+      "weight": 1
+    }
   },
   {
     "id": "course-005",
@@ -53,11 +69,15 @@
     "description": "This course offers engaging content and hands-on activities in biology.",
     "category": "Music",
     "type": "ONE_TIME",
-    "gradeRange": "6th\u201310th",
+    "gradeRange": "6th–10th",
     "minAge": 10,
     "maxAge": 14,
     "price": 180.51,
-    "nextSessionDate": "2025-07-16T15:00:00Z"
+    "nextSessionDate": "2025-07-16T15:00:00Z",
+    "suggest": {
+      "input": ["Advanced Biology"],
+      "weight": 1
+    }
   },
   {
     "id": "course-006",
@@ -65,11 +85,15 @@
     "description": "This course offers engaging content and hands-on activities in theatre.",
     "category": "Music",
     "type": "ONE_TIME",
-    "gradeRange": "9th\u201313th",
+    "gradeRange": "9th–13th",
     "minAge": 13,
     "maxAge": 17,
     "price": 247.99,
-    "nextSessionDate": "2025-08-22T13:00:00Z"
+    "nextSessionDate": "2025-08-22T13:00:00Z",
+    "suggest": {
+      "input": ["Advanced Theatre"],
+      "weight": 1
+    }
   },
   {
     "id": "course-007",
@@ -77,11 +101,15 @@
     "description": "This course offers engaging content and hands-on activities in python programming.",
     "category": "Science",
     "type": "ONE_TIME",
-    "gradeRange": "4th\u20138th",
+    "gradeRange": "4th–8th",
     "minAge": 8,
     "maxAge": 12,
     "price": 294.58,
-    "nextSessionDate": "2025-07-28T09:00:00Z"
+    "nextSessionDate": "2025-07-28T09:00:00Z",
+    "suggest": {
+      "input": ["Intro to Python Programming"],
+      "weight": 1
+    }
   },
   {
     "id": "course-008",
@@ -89,11 +117,15 @@
     "description": "This course offers engaging content and hands-on activities in guitar.",
     "category": "Geography",
     "type": "COURSE",
-    "gradeRange": "3th\u20137th",
+    "gradeRange": "3th–7th",
     "minAge": 7,
     "maxAge": 11,
     "price": 106.23,
-    "nextSessionDate": "2025-08-25T12:00:00Z"
+    "nextSessionDate": "2025-08-25T12:00:00Z",
+    "suggest": {
+      "input": ["Creative Guitar"],
+      "weight": 1
+    }
   },
   {
     "id": "course-009",
@@ -101,11 +133,15 @@
     "description": "This course offers engaging content and hands-on activities in biology.",
     "category": "Art",
     "type": "CLUB",
-    "gradeRange": "4th\u20137th",
+    "gradeRange": "4th–7th",
     "minAge": 8,
     "maxAge": 11,
     "price": 138.22,
-    "nextSessionDate": "2025-07-31T16:00:00Z"
+    "nextSessionDate": "2025-07-31T16:00:00Z",
+    "suggest": {
+      "input": ["Workshop in Biology"],
+      "weight": 1
+    }
   },
   {
     "id": "course-010",
@@ -113,490 +149,14 @@
     "description": "This course offers engaging content and hands-on activities in poetry.",
     "category": "History",
     "type": "CLUB",
-    "gradeRange": "4th\u20136th",
+    "gradeRange": "4th–6th",
     "minAge": 8,
     "maxAge": 10,
     "price": 240.71,
-    "nextSessionDate": "2025-08-08T12:00:00Z"
-  },
-  {
-    "id": "course-011",
-    "title": "Creative Biology",
-    "description": "This course offers engaging content and hands-on activities in biology.",
-    "category": "Coding",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20139th",
-    "minAge": 8,
-    "maxAge": 13,
-    "price": 118.29,
-    "nextSessionDate": "2025-08-24T15:00:00Z"
-  },
-  {
-    "id": "course-012",
-    "title": "Essentials of Painting",
-    "description": "This course offers engaging content and hands-on activities in painting.",
-    "category": "Art",
-    "type": "COURSE",
-    "gradeRange": "9th\u201313th",
-    "minAge": 13,
-    "maxAge": 17,
-    "price": 223.36,
-    "nextSessionDate": "2025-08-10T17:00:00Z"
-  },
-  {
-    "id": "course-013",
-    "title": "Fundamentals of Guitar",
-    "description": "This course offers engaging content and hands-on activities in guitar.",
-    "category": "Language Arts",
-    "type": "COURSE",
-    "gradeRange": "9th\u201314th",
-    "minAge": 13,
-    "maxAge": 18,
-    "price": 27.18,
-    "nextSessionDate": "2025-07-17T09:00:00Z"
-  },
-  {
-    "id": "course-014",
-    "title": "Exploring Painting",
-    "description": "This course offers engaging content and hands-on activities in painting.",
-    "category": "Art",
-    "type": "CLUB",
-    "gradeRange": "10th\u201312th",
-    "minAge": 14,
-    "maxAge": 16,
-    "price": 115.05,
-    "nextSessionDate": "2025-08-21T15:00:00Z"
-  },
-  {
-    "id": "course-015",
-    "title": "Intro to Theatre",
-    "description": "This course offers engaging content and hands-on activities in theatre.",
-    "category": "Drama",
-    "type": "COURSE",
-    "gradeRange": "2th\u20136th",
-    "minAge": 6,
-    "maxAge": 10,
-    "price": 229.81,
-    "nextSessionDate": "2025-08-04T09:00:00Z"
-  },
-  {
-    "id": "course-016",
-    "title": "Hands-on Robotics",
-    "description": "This course offers engaging content and hands-on activities in robotics.",
-    "category": "Art",
-    "type": "COURSE",
-    "gradeRange": "1th\u20135th",
-    "minAge": 5,
-    "maxAge": 9,
-    "price": 290.59,
-    "nextSessionDate": "2025-08-31T10:00:00Z"
-  },
-  {
-    "id": "course-017",
-    "title": "Workshop in Theatre",
-    "description": "This course offers engaging content and hands-on activities in theatre.",
-    "category": "Technology",
-    "type": "ONE_TIME",
-    "gradeRange": "10th\u201313th",
-    "minAge": 14,
-    "maxAge": 17,
-    "price": 45.7,
-    "nextSessionDate": "2025-08-31T10:00:00Z"
-  },
-  {
-    "id": "course-018",
-    "title": "Club:  Theatre",
-    "description": "This course offers engaging content and hands-on activities in theatre.",
-    "category": "Math",
-    "type": "CLUB",
-    "gradeRange": "6th\u201311th",
-    "minAge": 10,
-    "maxAge": 15,
-    "price": 5.82,
-    "nextSessionDate": "2025-08-06T12:00:00Z"
-  },
-  {
-    "id": "course-019",
-    "title": "Club:  Poetry",
-    "description": "This course offers engaging content and hands-on activities in poetry.",
-    "category": "Language Arts",
-    "type": "ONE_TIME",
-    "gradeRange": "2th\u20134th",
-    "minAge": 6,
-    "maxAge": 8,
-    "price": 218.84,
-    "nextSessionDate": "2025-07-18T16:00:00Z"
-  },
-  {
-    "id": "course-020",
-    "title": "Workshop in Painting",
-    "description": "This course offers engaging content and hands-on activities in painting.",
-    "category": "Geography",
-    "type": "ONE_TIME",
-    "gradeRange": "3th\u20137th",
-    "minAge": 7,
-    "maxAge": 11,
-    "price": 157.77,
-    "nextSessionDate": "2025-08-21T14:00:00Z"
-  },
-  {
-    "id": "course-021",
-    "title": "One-Day Poetry",
-    "description": "This course offers engaging content and hands-on activities in poetry.",
-    "category": "Language Arts",
-    "type": "CLUB",
-    "gradeRange": "7th\u201311th",
-    "minAge": 11,
-    "maxAge": 15,
-    "price": 130.99,
-    "nextSessionDate": "2025-08-16T15:00:00Z"
-  },
-  {
-    "id": "course-022",
-    "title": "Advanced Biology",
-    "description": "This course offers engaging content and hands-on activities in biology.",
-    "category": "Language Arts",
-    "type": "ONE_TIME",
-    "gradeRange": "6th\u20138th",
-    "minAge": 10,
-    "maxAge": 12,
-    "price": 175.9,
-    "nextSessionDate": "2025-07-28T17:00:00Z"
-  },
-  {
-    "id": "course-023",
-    "title": "Intro to Poetry",
-    "description": "This course offers engaging content and hands-on activities in poetry.",
-    "category": "Science",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20136th",
-    "minAge": 8,
-    "maxAge": 10,
-    "price": 270.72,
-    "nextSessionDate": "2025-08-04T09:00:00Z"
-  },
-  {
-    "id": "course-024",
-    "title": "Hands-on Theatre",
-    "description": "This course offers engaging content and hands-on activities in theatre.",
-    "category": "Technology",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20137th",
-    "minAge": 8,
-    "maxAge": 11,
-    "price": 216.28,
-    "nextSessionDate": "2025-08-19T17:00:00Z"
-  },
-  {
-    "id": "course-025",
-    "title": "Exploring Map Reading",
-    "description": "This course offers engaging content and hands-on activities in map reading.",
-    "category": "Geography",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20136th",
-    "minAge": 8,
-    "maxAge": 10,
-    "price": 28.98,
-    "nextSessionDate": "2025-08-10T13:00:00Z"
-  },
-  {
-    "id": "course-026",
-    "title": "Intro to Guitar",
-    "description": "This course offers engaging content and hands-on activities in guitar.",
-    "category": "Geography",
-    "type": "COURSE",
-    "gradeRange": "2th\u20134th",
-    "minAge": 6,
-    "maxAge": 8,
-    "price": 120.38,
-    "nextSessionDate": "2025-08-04T09:00:00Z"
-  },
-  {
-    "id": "course-027",
-    "title": "Workshop in Poetry",
-    "description": "This course offers engaging content and hands-on activities in poetry.",
-    "category": "Language Arts",
-    "type": "ONE_TIME",
-    "gradeRange": "8th\u201311th",
-    "minAge": 12,
-    "maxAge": 15,
-    "price": 126.14,
-    "nextSessionDate": "2025-07-31T15:00:00Z"
-  },
-  {
-    "id": "course-028",
-    "title": "Workshop in Poetry",
-    "description": "This course offers engaging content and hands-on activities in poetry.",
-    "category": "Geography",
-    "type": "ONE_TIME",
-    "gradeRange": "2th\u20134th",
-    "minAge": 6,
-    "maxAge": 8,
-    "price": 194.99,
-    "nextSessionDate": "2025-08-17T08:00:00Z"
-  },
-  {
-    "id": "course-029",
-    "title": "Exploring Biology",
-    "description": "This course offers engaging content and hands-on activities in biology.",
-    "category": "Art",
-    "type": "ONE_TIME",
-    "gradeRange": "8th\u201313th",
-    "minAge": 12,
-    "maxAge": 17,
-    "price": 63.91,
-    "nextSessionDate": "2025-08-08T08:00:00Z"
-  },
-  {
-    "id": "course-030",
-    "title": "Exploring Painting",
-    "description": "This course offers engaging content and hands-on activities in painting.",
-    "category": "Math",
-    "type": "COURSE",
-    "gradeRange": "5th\u201310th",
-    "minAge": 9,
-    "maxAge": 14,
-    "price": 85.29,
-    "nextSessionDate": "2025-08-27T16:00:00Z"
-  },
-  {
-    "id": "course-031",
-    "title": "One-Day Map Reading",
-    "description": "This course offers engaging content and hands-on activities in map reading.",
-    "category": "Language Arts",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20136th",
-    "minAge": 8,
-    "maxAge": 10,
-    "price": 173.17,
-    "nextSessionDate": "2025-08-17T08:00:00Z"
-  },
-  {
-    "id": "course-032",
-    "title": "Club:  World War II",
-    "description": "This course offers engaging content and hands-on activities in world war ii.",
-    "category": "Math",
-    "type": "ONE_TIME",
-    "gradeRange": "8th\u201311th",
-    "minAge": 12,
-    "maxAge": 15,
-    "price": 17.01,
-    "nextSessionDate": "2025-08-15T09:00:00Z"
-  },
-  {
-    "id": "course-033",
-    "title": "Advanced Painting",
-    "description": "This course offers engaging content and hands-on activities in painting.",
-    "category": "Coding",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20139th",
-    "minAge": 8,
-    "maxAge": 13,
-    "price": 35.85,
-    "nextSessionDate": "2025-08-19T11:00:00Z"
-  },
-  {
-    "id": "course-034",
-    "title": "Club:  Python Programming",
-    "description": "This course offers engaging content and hands-on activities in python programming.",
-    "category": "Math",
-    "type": "CLUB",
-    "gradeRange": "2th\u20137th",
-    "minAge": 6,
-    "maxAge": 11,
-    "price": 196.55,
-    "nextSessionDate": "2025-08-19T16:00:00Z"
-  },
-  {
-    "id": "course-035",
-    "title": "Creative World War II",
-    "description": "This course offers engaging content and hands-on activities in world war ii.",
-    "category": "Language Arts",
-    "type": "COURSE",
-    "gradeRange": "4th\u20138th",
-    "minAge": 8,
-    "maxAge": 12,
-    "price": 118.34,
-    "nextSessionDate": "2025-08-25T12:00:00Z"
-  },
-  {
-    "id": "course-036",
-    "title": "Intro to Map Reading",
-    "description": "This course offers engaging content and hands-on activities in map reading.",
-    "category": "Science",
-    "type": "COURSE",
-    "gradeRange": "8th\u201310th",
-    "minAge": 12,
-    "maxAge": 14,
-    "price": 21.9,
-    "nextSessionDate": "2025-07-27T16:00:00Z"
-  },
-  {
-    "id": "course-037",
-    "title": "Advanced Robotics",
-    "description": "This course offers engaging content and hands-on activities in robotics.",
-    "category": "History",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20138th",
-    "minAge": 8,
-    "maxAge": 12,
-    "price": 85.21,
-    "nextSessionDate": "2025-08-11T16:00:00Z"
-  },
-  {
-    "id": "course-038",
-    "title": "Intro to Robotics",
-    "description": "This course offers engaging content and hands-on activities in robotics.",
-    "category": "Drama",
-    "type": "CLUB",
-    "gradeRange": "9th\u201313th",
-    "minAge": 13,
-    "maxAge": 17,
-    "price": 278.6,
-    "nextSessionDate": "2025-07-20T10:00:00Z"
-  },
-  {
-    "id": "course-039",
-    "title": "Workshop in Robotics",
-    "description": "This course offers engaging content and hands-on activities in robotics.",
-    "category": "Science",
-    "type": "ONE_TIME",
-    "gradeRange": "3th\u20137th",
-    "minAge": 7,
-    "maxAge": 11,
-    "price": 84.25,
-    "nextSessionDate": "2025-07-27T13:00:00Z"
-  },
-  {
-    "id": "course-040",
-    "title": "Workshop in Poetry",
-    "description": "This course offers engaging content and hands-on activities in poetry.",
-    "category": "Technology",
-    "type": "CLUB",
-    "gradeRange": "8th\u201312th",
-    "minAge": 12,
-    "maxAge": 16,
-    "price": 270.7,
-    "nextSessionDate": "2025-07-17T09:00:00Z"
-  },
-  {
-    "id": "course-041",
-    "title": "Intro to Guitar",
-    "description": "This course offers engaging content and hands-on activities in guitar.",
-    "category": "Math",
-    "type": "COURSE",
-    "gradeRange": "6th\u20139th",
-    "minAge": 10,
-    "maxAge": 13,
-    "price": 190.5,
-    "nextSessionDate": "2025-07-30T10:00:00Z"
-  },
-  {
-    "id": "course-042",
-    "title": "Workshop in Map Reading",
-    "description": "This course offers engaging content and hands-on activities in map reading.",
-    "category": "Music",
-    "type": "CLUB",
-    "gradeRange": "1th\u20133th",
-    "minAge": 5,
-    "maxAge": 7,
-    "price": 22.5,
-    "nextSessionDate": "2025-08-27T10:00:00Z"
-  },
-  {
-    "id": "course-043",
-    "title": "Club:  Theatre",
-    "description": "This course offers engaging content and hands-on activities in theatre.",
-    "category": "History",
-    "type": "ONE_TIME",
-    "gradeRange": "9th\u201312th",
-    "minAge": 13,
-    "maxAge": 16,
-    "price": 128.51,
-    "nextSessionDate": "2025-07-16T12:00:00Z"
-  },
-  {
-    "id": "course-044",
-    "title": "Essentials of World War II",
-    "description": "This course offers engaging content and hands-on activities in world war ii.",
-    "category": "History",
-    "type": "ONE_TIME",
-    "gradeRange": "4th\u20136th",
-    "minAge": 8,
-    "maxAge": 10,
-    "price": 105.75,
-    "nextSessionDate": "2025-08-18T14:00:00Z"
-  },
-  {
-    "id": "course-045",
-    "title": "Essentials of Python Programming",
-    "description": "This course offers engaging content and hands-on activities in python programming.",
-    "category": "Art",
-    "type": "CLUB",
-    "gradeRange": "3th\u20136th",
-    "minAge": 7,
-    "maxAge": 10,
-    "price": 263.54,
-    "nextSessionDate": "2025-07-15T10:00:00Z"
-  },
-  {
-    "id": "course-046",
-    "title": "One-Day World War II",
-    "description": "This course offers engaging content and hands-on activities in world war ii.",
-    "category": "Language Arts",
-    "type": "COURSE",
-    "gradeRange": "3th\u20135th",
-    "minAge": 7,
-    "maxAge": 9,
-    "price": 114.38,
-    "nextSessionDate": "2025-07-16T15:00:00Z"
-  },
-  {
-    "id": "course-047",
-    "title": "Creative Poetry",
-    "description": "This course offers engaging content and hands-on activities in poetry.",
-    "category": "Geography",
-    "type": "ONE_TIME",
-    "gradeRange": "5th\u20138th",
-    "minAge": 9,
-    "maxAge": 12,
-    "price": 66.65,
-    "nextSessionDate": "2025-08-25T11:00:00Z"
-  },
-  {
-    "id": "course-048",
-    "title": "Advanced Guitar",
-    "description": "This course offers engaging content and hands-on activities in guitar.",
-    "category": "Technology",
-    "type": "COURSE",
-    "gradeRange": "5th\u20139th",
-    "minAge": 9,
-    "maxAge": 13,
-    "price": 191.8,
-    "nextSessionDate": "2025-08-08T16:00:00Z"
-  },
-  {
-    "id": "course-049",
-    "title": "One-Day World War II",
-    "description": "This course offers engaging content and hands-on activities in world war ii.",
-    "category": "Science",
-    "type": "ONE_TIME",
-    "gradeRange": "3th\u20137th",
-    "minAge": 7,
-    "maxAge": 11,
-    "price": 11.44,
-    "nextSessionDate": "2025-08-21T14:00:00Z"
-  },
-  {
-    "id": "course-050",
-    "title": "Exploring World War II",
-    "description": "This course offers engaging content and hands-on activities in world war ii.",
-    "category": "History",
-    "type": "CLUB",
-    "gradeRange": "10th\u201312th",
-    "minAge": 14,
-    "maxAge": 16,
-    "price": 115.17,
-    "nextSessionDate": "2025-08-19T11:00:00Z"
+    "nextSessionDate": "2025-08-08T12:00:00Z",
+    "suggest": {
+      "input": ["Intro to Poetry"],
+      "weight": 1
+    }
   }
 ]

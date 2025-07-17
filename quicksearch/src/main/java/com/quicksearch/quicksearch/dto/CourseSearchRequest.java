@@ -1,4 +1,4 @@
-package com.quicksearch.dto;
+package com.quicksearch.quicksearch.dto;
 
 import java.time.LocalDate;
 

@@ -1,8 +1,10 @@
 package com.quicksearch.quicksearch.document;
 
-import java.time.Instant;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import java.time.Instant;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CourseDocument {
@@ -16,13 +18,18 @@ public class CourseDocument {
     private int minAge;
     private int maxAge;
     private double price;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS]'Z'", timezone = "UTC")
     private Instant nextSessionDate;
+
+    private Suggest suggest;
 
     public CourseDocument() {
     }
 
     public CourseDocument(String id, String title, String description, String category, String type,
-            String gradeRange, int minAge, int maxAge, double price, Instant nextSessionDate) {
+            String gradeRange, int minAge, int maxAge, double price, Instant nextSessionDate,
+            Suggest suggest) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -33,6 +40,7 @@ public class CourseDocument {
         this.maxAge = maxAge;
         this.price = price;
         this.nextSessionDate = nextSessionDate;
+        this.suggest = suggest;
     }
 
     public String getId() {
@@ -113,5 +121,44 @@ public class CourseDocument {
 
     public void setNextSessionDate(Instant nextSessionDate) {
         this.nextSessionDate = nextSessionDate;
+    }
+
+    public Suggest getSuggest() {
+        return suggest;
+    }
+
+    public void setSuggest(Suggest suggest) {
+        this.suggest = suggest;
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public static class Suggest {
+        private List<String> input;
+        private Integer weight;
+
+        public Suggest() {
+        }
+
+        public Suggest(List<String> input, Integer weight) {
+            this.input = input;
+            this.weight = weight;
+        }
+
+        public List<String> getInput() {
+            return input;
+        }
+
+        public void setInput(List<String> input) {
+            this.input = input;
+        }
+
+        public Integer getWeight() {
+            return weight;
+        }
+
+        public void setWeight(Integer weight) {
+            this.weight = weight;
+        }
     }
 }

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -44,6 +45,12 @@ public class IngestionService {
             List<BulkOperation> operations = new ArrayList<>();
 
             for (CourseDocument course : courses) {
+
+                CourseDocument.Suggest suggest = new CourseDocument.Suggest(
+                        Collections.singletonList(course.getTitle()), null);
+
+                course.setSuggest(suggest);
+
                 operations.add(BulkOperation.of(op -> op
                         .index(idx -> idx
                                 .index("courses")
@@ -55,12 +62,22 @@ public class IngestionService {
                     .operations(operations)
                     .build();
 
-            client.bulk(request);
-            System.out.println("Successfully ingested " + courses.size() + " courses.");
+            var response = client.bulk(request);
+
+            if (response.errors()) {
+                System.err.println("Some documents failed to ingest:");
+                response.items().forEach(item -> {
+                    if (item.error() != null) {
+                        System.err.println("Error in index '" + item.index() + "' for ID '" + item.id() + "': "
+                                + item.error().reason());
+                    }
+                });
+            } else {
+                System.out.println("Successfully ingested " + response.items().size() + " courses.");
+            }
 
         } catch (Exception e) {
             System.err.println("Failed to ingest courses: " + e.getMessage());
-
             e.printStackTrace();
         }
     }

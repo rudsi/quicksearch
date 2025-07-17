@@ -1,8 +1,9 @@
 package com.quicksearch.quicksearch.controller;
 
 import java.time.LocalDate;
+import java.util.List;
 
-import com.quicksearch.dto.CourseSearchResponse;
+import com.quicksearch.quicksearch.dto.CourseSearchResponse;
 import com.quicksearch.quicksearch.service.SearchService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,5 +37,10 @@ public class SearchController {
 
         return searchService.searchCourses(
                 q, minAge, maxAge, category, type, minPrice, maxPrice, startDate, sort, page, size);
+    }
+
+    @GetMapping("/search/suggest")
+    public List<String> suggest(@RequestParam("q") String prefix) throws Exception {
+        return searchService.suggestTitles(prefix);
     }
 }

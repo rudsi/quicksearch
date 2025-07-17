@@ -25,8 +25,6 @@ public class SearchService {
         this.client = client;
     }
 
-    // ----------------- 🔍 SEARCH COURSES -----------------
-
     public CourseSearchResponse searchCourses(
             String q, Integer minAge, Integer maxAge, String category, String type,
             Double minPrice, Double maxPrice, LocalDate startDate, String sort, int page, int size) throws Exception {
